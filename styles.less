@@ -23,6 +23,15 @@
 	user-select: @userselect;
 }
 
+.knob() {
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 1px 0 rgba(0, 0, 0, 0.05);
+	border: solid 0.5px rgba(0, 0, 0, 0.1);
+	background:#FFF;
+}
+
 button,
 a.btn {
 	height: 47px;
@@ -74,14 +83,9 @@ label.switch {
 		top:0px;
 		content:"";
 		transition: .4s;
-		border-radius: 50%;
 		display:block;
 		position:absolute;
-		background:#FFF;
-		width: 28px;
-		height: 28px;
-		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 1px 0 rgba(0, 0, 0, 0.05);
-		border: solid 0.5px rgba(0, 0, 0, 0.1);
+		.knob();
 	}
 
 	input:checked {
@@ -139,8 +143,30 @@ label.checkbox {
 	}
 }
 
+.slider {
+	width:100%;
+	height:2px;
+	-webkit-appearance: none;
+	appearance: none;
+	background:@call-out;
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance:none;
+		appearance:none;
+		.knob();
+	}
+	&::-moz-range-thumb {
+		.knob();
+	}
+}
+
 input[type=text] {
 	background-color:#dfdfdf;
 	border-radius:2px;
+	font-size:10px;
+	padding-left: 13px;
+	padding-right: 13px;
 	border:0;
+	height:33px;
+	width:100%;
 }
