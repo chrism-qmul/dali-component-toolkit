@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DALI Component Toolkit</title>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" />
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+<style type='text/css'>
+body {
+  padding:20px;
+}
+</style>
+  </head>
+  <body>
+
+    <h1>DALI Component Toolkit</h1>
+    
+    <h2>Buttons</h2>
+    <p>Buttons are available in two sizes and three importance levels</p>
+    <figure>
+    <button>select</button>
+    <button class='small'>no</button>
+    <button class='small secondary'>no</button>
+    <button class='secondary'>select</button>
+    <button class='small tertiary'>no</button>
+    </figure>
+    <figure>
+      <pre>
+        <code class="language-markup">
+          &lt;button&gt;select&lt;/button&gt;
+          &lt;button class='small'&gt;no&lt;/button&gt;
+          &lt;button class='small secondary'&gt;no&lt;/button&gt;
+          &lt;button class='secondary'&gt;select&lt;/button&gt;
+          &lt;button class='small tertiary'&gt;no&lt;/button&gt;
+        </code>
+      </pre>
+    </figure>
+    <h2>Slider</h2>
+    <p>A slider that behaves like a checkbox element (no Javascript!)</p>
+    <label class='switch'>
+      <input type='checkbox' />
+      <div class='slider'></div>
+    </label>
+    <figure>
+      <pre>
+        <code class="language-markup">
+          &lt;label class='switch'&gt;
+            &lt;input type='checkbox' /&gt;
+            &lt;div class='slider'&gt;&lt;/div&gt;
+          &lt;/label&gt;
+        </code>
+      </pre>
+    </figure>
+
+    <h2>Progress Bar</h2>
+    <div class='progress-bar'>
+      <span>37%</span>
+      <div style='width:37%;' class='bar'></div>
+    </div>
+    <figure>
+      <pre>
+        <code class="language-markup">
+          &lt;div class='progress-bar'&gt;
+            &lt;span&gt;37%&lt;/span&gt;
+            &lt;div style='width:37%;' class='bar'&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        </code>
+      </pre>
+    </figure>
+
+    <h2>Checkbox</h2>
+    <p>A custom checkbox (TODO: can't export tick asset at the moment)</p>
+
+    <label class='checkbox'>
+      <input type='checkbox' />
+      <div class='checkbox'></div>
+    </label>
+
+    <figure>
+      <pre>
+        <code class="language-markup">
+          &lt;label class='checkbox'&gt;
+            &lt;input type='checkbox' /&gt;
+            &lt;div class='checkbox'&gt;&lt;/div&gt;
+          &lt;/label&gt;
+        </code>
+      </pre>
+    </figure>
+
+    <h2>Forms</h2>
+    <form>
+      <p>
+      <label>User Name
+        <input type='text' name='username' />
+      </label>
+      </p>
+      <p>
+      <label>Email Address
+        <input type='text' name='email' />
+      </label>
+      </p>
+    </form>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
+    <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  </body>
+</html>

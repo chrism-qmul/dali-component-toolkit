@@ -1,0 +1,146 @@
+@warning: #f97291;
+@warning-hint:#e6a6ae;
+@success: #6ce8b0;
+@success-hint: #a3d6bf;
+@primary: #2a2a2a;
+@call-out: #8642fe;
+@secondary: #fff;
+
+* {
+	outline:none;
+}
+
+.hide() {
+	opacity:0;
+	width:0;
+	height:0;
+}
+
+.user-select(@userselect) {
+	-webkit-user-select: @userselect;
+	-moz-user-select: @userselect;
+	-ms-user-select: @userselect;
+	user-select: @userselect;
+}
+
+button,
+a.btn {
+	height: 47px;
+	border: 0px;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 11px 18px;
+	border-radius: 23.5px;
+	background: @primary;
+	color: @secondary;
+	box-shadow: 0 3px 12px -1px rgba(134, 66, 254, 0.42), 3px 8px 29px 0 rgba(0, 0, 0, 0.14);
+	text-transform: uppercase;
+
+	&.small {
+		height: 36px;
+	}
+
+	&.secondary {
+		background: @secondary;
+		color: @primary;
+	}
+
+	&.tertiary {
+		color: @primary;
+		background:none;
+		border-radius:none;
+		box-shadow:none;
+	}
+}
+
+label.switch {
+	.slider {
+		.user-select(none);
+		position:relative;
+		display:inline-block;
+		width: 51px;
+		height: 31px;
+		border-radius: 15.5px;
+		background-color:#eee;
+		transition: .4s;
+	}
+
+	input {
+		.hide();
+	}
+
+	.slider:before {
+		left:0px;
+		top:0px;
+		content:"";
+		transition: .4s;
+		border-radius: 50%;
+		display:block;
+		position:absolute;
+		background:#FFF;
+		width: 28px;
+		height: 28px;
+		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 1px 0 rgba(0, 0, 0, 0.05);
+		border: solid 0.5px rgba(0, 0, 0, 0.1);
+	}
+
+	input:checked {
+		+ .slider {
+			background-color: #4cd964;
+			&:before { left:22px; }
+		}
+	}
+}
+
+.progress-bar {
+	background: fade(@call-out, 10%);
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:18px;
+	border-radius: 3px;
+
+	span {
+		position:absolute;
+		text-align:center;
+		display:inline-block;
+		width:100%;
+		font-size:10px;
+	}
+
+	.bar {
+		position:absolute;
+		background: fade(@call-out, 20%);
+		height:100%;
+	}
+}
+
+label.checkbox {
+	input[type=checkbox] {
+		.hide();
+	}
+	.checkbox {
+		.user-select(none);
+		display:inline-block;
+		width: 36px;
+		height: 36px;
+		text-align:center;
+		border-radius: 8px;
+		box-shadow: 3px 8px 29px 0 rgba(0, 0, 0, 0.14), 0 3px 15px -6px rgba(134, 66, 254, 0.42);
+		overflow:hidden;
+	}
+
+	input:checked {
+		+ .checkbox:before {
+			left:0;
+			font-size:30px;
+			content:"✔";
+		}
+	}
+}
+
+input[type=text] {
+	background-color:#dfdfdf;
+	border-radius:2px;
+	border:0;
+}
