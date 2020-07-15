@@ -8,110 +8,165 @@
 body {
   padding:20px;
 }
+
+section {
+  border:1px solid grey;
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:2em;
+}
 </style>
   </head>
   <body>
 
     <h1>DALI Component Toolkit</h1>
+    <p>Write minimal HTML - get DALI components</p>
     
-    <h2>Capsule Buttons</h2>
-    <p>Buttons are available in two sizes and three importance levels</p>
-    <figure>
-    <button>select</button>
-    <button class='small'>no</button>
-    <button class='small secondary'>no</button>
-    <button class='secondary'>select</button>
-    <button class='small tertiary'>no</button>
-    </figure>
-    <figure>
-      <pre>
-        <code class="language-markup">
-          &lt;button&gt;select&lt;/button&gt;
-          &lt;button class='small'&gt;no&lt;/button&gt;
-          &lt;button class='small secondary'&gt;no&lt;/button&gt;
-          &lt;button class='secondary'&gt;select&lt;/button&gt;
-          &lt;button class='small tertiary'&gt;no&lt;/button&gt;
-        </code>
-      </pre>
-    </figure>
-    <h2>Round Buttons</h2>
+    <section>
+      <h2>Capsule Buttons</h2>
+      <p>Buttons are available in two sizes and three importance levels</p>
+      <figure>
+      <button>select</button>
+      <button class='small'>no</button>
+      <button class='small secondary'>no</button>
+      <button class='secondary'>select</button>
+      <button class='small tertiary'>no</button>
+      </figure>
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;button&gt;select&lt;/button&gt;
+            &lt;button class='small'&gt;no&lt;/button&gt;
+            &lt;button class='small secondary'&gt;no&lt;/button&gt;
+            &lt;button class='secondary'&gt;select&lt;/button&gt;
+            &lt;button class='small tertiary'&gt;no&lt;/button&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
 
-    <h2>Switch</h2>
-    <p>A switch that behaves like a checkbox element (no Javascript!)</p>
-    <label class='switch'>
-      <input type='checkbox' />
-      <div class='slider'></div>
-    </label>
-    <figure>
-      <pre>
-        <code class="language-markup">
-          &lt;label class='switch'&gt;
-            &lt;input type='checkbox' /&gt;
-            &lt;div class='slider'&gt;&lt;/div&gt;
-          &lt;/label&gt;
-        </code>
-      </pre>
-    </figure>
+    <section>
+      <h2>Round Buttons</h2>
+      <button class='round'>test</button>
+      <button class='round secondary'>test</button>
+    </section>
 
-    <h2>Progress Bar</h2>
-    <div class='progress-bar'>
-      <span>37%</span>
-      <div style='width:37%;' class='bar'></div>
-    </div>
-    <figure>
-      <pre>
-        <code class="language-markup">
-          &lt;div class='progress-bar'&gt;
-            &lt;span&gt;37%&lt;/span&gt;
-            &lt;div style='width:37%;' class='bar'&gt;&lt;/div&gt;
-          &lt;/div&gt;
-        </code>
-      </pre>
-    </figure>
+    <section>
+      <h2>Specific Round Buttons</h2>
+      <button class='help secondary'></button>
+      <button class='done'></button>
+      <button class='done secondary'></button>
+      <button class='map secondary'></button>
+      <button class='close'></button>
+      <button class='open'></button>
+      <button class='start secondary'></button>
+      <button class='skip secondary'></button>
+      <button class='forum secondary'></button>
+      <button class='menu secondary'></button>
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;button class='help secondary'&gt;&lt;/button&gt;
+            &lt;button class='done'&gt;&lt;/button&gt;
+            &lt;button class='done secondary'&gt;&lt;/button&gt;
+            &lt;button class='map secondary'&gt;&lt;/button&gt;
+            &lt;button class='close'&gt;&lt;/button&gt;
+            &lt;button class='open'&gt;&lt;/button&gt;
+            &lt;button class='start secondary'&gt;&lt;/button&gt;
+            &lt;button class='skip secondary'&gt;&lt;/button&gt;
+            &lt;button class='forum secondary'&gt;&lt;/button&gt;
+            &lt;button class='menu secondary'&gt;&lt;/button&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
 
-    <h2>Checkbox</h2>
-    <p>A custom checkbox (TODO: can't export tick asset at the moment)</p>
-
-    <label class='checkbox'>
-      <input type='checkbox' />
-      <div class='checkbox'></div>
-    </label>
-
-    <figure>
-      <pre>
-        <code class="language-markup">
-          &lt;label class='checkbox'&gt;
-            &lt;input type='checkbox' /&gt;
-            &lt;div class='checkbox'&gt;&lt;/div&gt;
-          &lt;/label&gt;
-        </code>
-      </pre>
-    </figure>
-
-    <h2>Slider</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" />
-
-    <figure>
-      <pre>
-        <code class="language-markup">
-          &lt;input type="range" min="1" max="100" value="50" class="slider" /&gt;
-        </code>
-      </pre>
-    </figure>
-
-    <h2>Forms</h2>
-    <form>
-      <p>
-      <label>User Name
-        <input type='text' name='username' />
+    <section>
+      <h2>Switch</h2>
+      <p>A switch that behaves like a checkbox element (no Javascript!)</p>
+      <label class='switch'>
+        <input type='checkbox' />
+        <div class='slider'></div>
       </label>
-      </p>
-      <p>
-      <label>Email Address
-        <input type='text' name='email' />
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;label class='switch'&gt;
+              &lt;input type='checkbox' /&gt;
+              &lt;div class='slider'&gt;&lt;/div&gt;
+            &lt;/label&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Progress Bar</h2>
+      <div class='progress-bar'>
+        <span>37%</span>
+        <div style='width:37%;' class='bar'></div>
+      </div>
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;div class='progress-bar'&gt;
+              &lt;span&gt;37%&lt;/span&gt;
+              &lt;div style='width:37%;' class='bar'&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Checkbox</h2>
+      <p>A custom checkbox</p>
+
+      <label class='checkbox'>
+        <input type='checkbox' />
+        <div class='checkbox'></div>
       </label>
-      </p>
-    </form>
+
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;label class='checkbox'&gt;
+              &lt;input type='checkbox' /&gt;
+              &lt;div class='checkbox'&gt;&lt;/div&gt;
+            &lt;/label&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Slider</h2>
+      <input type="range" min="1" max="100" value="50" class="slider" />
+
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;input type="range" min="1" max="100" value="50" class="slider" /&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Forms</h2>
+      <form>
+        <p>
+        <label>User Name
+          <input type='text' name='username' />
+        </label>
+        </p>
+        <p>
+        <label>Email Address
+          <input type='text' name='email' />
+        </label>
+        </p>
+      </form>
+    </section>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
     <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>

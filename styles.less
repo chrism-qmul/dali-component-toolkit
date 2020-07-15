@@ -34,12 +34,14 @@
 
 button,
 a.btn {
+	cursor:pointer;
 	height: 47px;
 	border: 0px;
 	font-size: 14px;
 	line-height: 14px;
 	padding: 11px 18px;
 	border-radius: 23.5px;
+	text-decoration:none;
 	background: @primary;
 	color: @secondary;
 	box-shadow: 0 3px 12px -1px rgba(134, 66, 254, 0.42), 3px 8px 29px 0 rgba(0, 0, 0, 0.14);
@@ -52,6 +54,10 @@ a.btn {
 	&.secondary {
 		background: @secondary;
 		color: @primary;
+
+		&::before {
+			filter:invert(1);
+		}
 	}
 
 	&.tertiary {
@@ -60,7 +66,74 @@ a.btn {
 		border-radius:none;
 		box-shadow:none;
 	}
+
+	&.round,
+       	&.help,
+	&.done,
+	&.map,
+	&.close,
+	&.open,
+	&.start,
+	&.skip,
+	&.forum,
+	&.menu {
+		position:relative;
+		padding:0px;
+		font-size:10px;
+		width:56px;
+		height:56px;
+		border-radius:28px;
+		text-align:center;
+		&::before { 
+			position:absolute;
+			display:inline-block;
+			top:10px;
+			left:15px;
+		}
+		&::after {
+			display:inline-block;
+			padding-top:23px;
+		}
+	}
+
+	&.help {
+		&::after { content: "HELP"; }
+		&::before { left:20px; content:data-uri('assets/help.png'); }
+	}
+	&.done {
+		&::after { content: "DONE"; }
+		&::before { top:12px; left:16px;content:data-uri('assets/done.png'); }
+	}
+	&.map {
+		&::after { content: "MAP"; }
+		&::before { content:data-uri('assets/map.png'); }
+	}
+	&.close {
+		&::after { content: "CLOSE"; }
+		&::before { left:17px; content:data-uri('assets/close.png'); }
+	}
+	&.open {
+		&::after { content: "OPEN"; }
+		&::before { content:data-uri('assets/open.png'); }
+	}
+	&.start { 
+		&::after { content: "START"; } 
+		&::before { content:data-uri('assets/start.png'); }
+	}
+	&.skip {
+		&::after { content: "SKIP"; }
+		&::before { left:18px; content:data-uri('assets/skip.png'); }
+	}
+	&.forum {
+		&::after { content: "FORUM"; }
+		&::before { content:data-uri('assets/forum.png'); }
+	}
+	&.menu {
+		&::after { content: "MENU"; }
+		&::before { content:data-uri('assets/menu.png'); }
+	}
 }
+
 
 label.switch {
 	.slider {
@@ -124,6 +197,7 @@ label.checkbox {
 		.hide();
 	}
 	.checkbox {
+		position:relative;
 		.user-select(none);
 		display:inline-block;
 		width: 36px;
@@ -136,9 +210,16 @@ label.checkbox {
 
 	input:checked {
 		+ .checkbox:before {
-			left:0;
-			font-size:30px;
-			content:"✔";
+			display: block;
+			position: absolute;
+			left: 6px;
+			top: 10px;
+			font-size: 30px;
+			content: " ";
+			width: 23px;
+			height: 17px;
+			background: data-uri('image/svg+xml;charset=UTF-8', 'assets/check.svg');
+			background-repeat: no-repeat;
 		}
 	}
 }
