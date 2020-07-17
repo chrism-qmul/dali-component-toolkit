@@ -259,7 +259,7 @@ label.checkbox {
 		background:@success-hint;
 		&::after {
 			content: "✔";
-			color:@success-hint;
+			color:@success;
 		}
 
 	}
@@ -274,7 +274,7 @@ label.checkbox {
 		background:@warning-hint;
 		&::after {
 			content: "✕";
-			color:@warning-hint;
+			color:@warning;
 		}
 	}
 }
@@ -288,4 +288,14 @@ input[type=text] {
 	border:0;
 	height:33px;
 	width:100%;
+}
+
+nav.btn-panel {
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&.tight {
+		justify-content: space-evenly;
+	}
 }
