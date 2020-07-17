@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 @warning: #f97291;
 @warning-hint:#e6a6ae;
 @success: #6ce8b0;
@@ -5,15 +7,27 @@
 @primary: #2a2a2a;
 @call-out: #8642fe;
 @secondary: #fff;
+@special-buttons: help, done, map, close, open, start, skip, forum, menu;
 
 * {
 	outline:none;
+	font-family: 'Nunito', sans-serif;
 }
 
 .hide() {
 	opacity:0;
 	width:0;
 	height:0;
+}
+
+.colorized-svg-background(@background-color, @image) {
+	background-color:@background-color;
+	mask-image: @image;
+	-webkit-mask-image: $mask-image;
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: $mask-repeat;
+	mask-size:contain;
+	-webkit-mask-size: $mask-size;
 }
 
 .user-select(@userselect) {
@@ -40,7 +54,7 @@ a.btn {
 	font-size: 14px;
 	line-height: 14px;
 	padding: 11px 18px;
-	border-radius: 23.5px;
+	border-radius: $height / 2;
 	text-decoration:none;
 	background: @primary;
 	color: @secondary;
@@ -55,9 +69,6 @@ a.btn {
 		background: @secondary;
 		color: @primary;
 
-		&::before {
-			filter:invert(1);
-		}
 	}
 
 	&.tertiary {
@@ -67,16 +78,7 @@ a.btn {
 		box-shadow:none;
 	}
 
-	&.round,
-       	&.help,
-	&.done,
-	&.map,
-	&.close,
-	&.open,
-	&.start,
-	&.skip,
-	&.forum,
-	&.menu {
+	&.round {
 		position:relative;
 		padding:0px;
 		font-size:10px;
@@ -87,51 +89,31 @@ a.btn {
 		&::before { 
 			position:absolute;
 			display:inline-block;
-			top:10px;
-			left:15px;
+			top:9px;
+			left:16px;
 		}
 		&::after {
 			display:inline-block;
-			padding-top:23px;
+			padding-top:25px;
 		}
 	}
 
-	&.help {
-		&::after { content: "HELP"; }
-		&::before { left:20px; content:data-uri('assets/help.png'); }
-	}
-	&.done {
-		&::after { content: "DONE"; }
-		&::before { top:12px; left:16px;content:data-uri('assets/done.png'); }
-	}
-	&.map {
-		&::after { content: "MAP"; }
-		&::before { content:data-uri('assets/map.png'); }
-	}
-	&.close {
-		&::after { content: "CLOSE"; }
-		&::before { left:17px; content:data-uri('assets/close.png'); }
-	}
-	&.open {
-		&::after { content: "OPEN"; }
-		&::before { content:data-uri('assets/open.png'); }
-	}
-	&.start { 
-		&::after { content: "START"; } 
-		&::before { content:data-uri('assets/start.png'); }
-	}
-	&.skip {
-		&::after { content: "SKIP"; }
-		&::before { left:18px; content:data-uri('assets/skip.png'); }
-	}
-	&.forum {
-		&::after { content: "FORUM"; }
-		&::before { content:data-uri('assets/forum.png'); }
-	}
-	&.menu {
-		&::after { content: "MENU"; }
-		&::before { content:data-uri('assets/menu.png'); }
-	}
+	each(@special-buttons, {
+		&.btn-@{value} {
+			.round();
+			&::after { content: "@{value}"; }
+			&::before { 
+				content: " "; 
+				display:block;
+				width:24px; 
+				height:24px; 
+				.colorized-svg-background(@secondary, data-uri('image/svg+xml;charset=UTF-8',"assets/btn/@{value}.svg"));
+			}
+			&.secondary::before {
+				background-color:@primary;
+			}
+		}
+	});
 }
 
 
@@ -142,7 +124,7 @@ label.switch {
 		display:inline-block;
 		width: 51px;
 		height: 31px;
-		border-radius: 15.5px;
+		border-radius: $height / 2;
 		background-color:#eee;
 		transition: .4s;
 	}
@@ -201,7 +183,7 @@ label.checkbox {
 		.user-select(none);
 		display:inline-block;
 		width: 36px;
-		height: 36px;
+		height: $width;
 		text-align:center;
 		border-radius: 8px;
 		box-shadow: 3px 8px 29px 0 rgba(0, 0, 0, 0.14), 0 3px 15px -6px rgba(134, 66, 254, 0.42);
