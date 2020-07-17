@@ -169,7 +169,47 @@ section {
         </p>
       </form>
     </section>
-    <div style='width:46px;height:63px;border:1px solid black;background-color:red;-webkit-mask-image:url(map_web.svg);mask-image:url(map_web.svg);mask-size:contain;mask-repeat:no-repeat;'></div>
+
+    <section>
+      <h2>Testers</h2>
+      <p>These are used during the onboarding phase of games to see if a player can spot a certain trait in a given sentence.</p>
+      <div style='width:300px;'>
+      <div class='tester'>
+        <p><b>Unconfirmed state</b> Here is some text that spans over multiple lines.</p>
+      </div>
+      <div class='tester false-negative'>
+        <p><b>False negative state:</b> Here is some text that spans over multiple lines.</p>
+      </div>
+      <div class='tester true-positive'>
+        <p><b>True positive state:</b> Here is some text that spans over multiple lines.</p>
+      </div>
+      <div class='tester false-positive'>
+        <p><b>False positive state:</b> Here is some text that spans over multiple lines.   Here's some extra text to make sure everything still aligns nicely.</p>
+      </div>
+      </div>
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;div class='tester'&gt;
+              &lt;p&gt;&lt;b&gt;Unconfirmed state&lt;/b&gt; Here is some text that spans over multiple lines.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class='tester false-negative'&gt;
+              &lt;p&gt;&lt;b&gt;False negative state:&lt;/b&gt; Here is some text that spans over multiple lines.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class='tester true-positive'&gt;
+              &lt;p&gt;&lt;b&gt;True positive state:&lt;/b&gt; Here is some text that spans over multiple lines.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class='tester false-positive'&gt;
+              &lt;p&gt;&lt;b&gt;False positive state:&lt;/b&gt; Here is some text that spans over multiple lines.   Here's some extra text to make sure everything still aligns nicely.&lt;/p&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Button Panels</h2>
+    </section>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
     <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
