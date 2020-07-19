@@ -9,12 +9,17 @@
 @secondary: #fff;
 @special-buttons: help, done, map, close, open, start, skip, forum, menu;
 
+.clearfix {
+	clear:both;
+}
+
 * {
 	outline:none;
 	font-family: 'Nunito', sans-serif;
 }
 
 .hide() {
+	float:left;
 	opacity:0;
 	width:0;
 	height:0;
@@ -35,6 +40,10 @@
 	-moz-user-select: @userselect;
 	-ms-user-select: @userselect;
 	user-select: @userselect;
+}
+
+label {
+	.user-select(none);
 }
 
 .knob() {
@@ -174,7 +183,22 @@ label.switch {
 	}
 }
 
+.light {
+	color:grey;
+}
+
 label.checkbox {
+	display:flex;
+	justify-content: flex-start;
+
+	span.tip {
+		color:grey;
+		font-size:10px;
+		line-height:13px;
+		padding-top:6px;
+		padding-left:10px;
+	}
+
 	input[type=checkbox] {
 		.hide();
 	}
@@ -294,8 +318,61 @@ nav.btn-panel {
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom:1em;
 
 	&.tight {
 		justify-content: space-evenly;
+	}
+}
+
+aside.confirm-tip {
+	position:absolute;
+	bottom:0px;
+	background:@secondary;
+	left:5%;
+	padding:5%;
+	width:80%;
+	border-radius:15px 15px 0 0;
+	box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.24), 0 2px 83px 0 rgba(0, 0, 0, 0.14);
+
+	& > p {
+		margin-top:0;
+		text-align:center;
+		color:grey;
+	}
+}
+
+.dialog,
+aside.popup {
+	border-radius:15px;
+	background:@secondary;
+	box-shadow: 3px 8px 29px 0 rgba(0, 0, 0, 0.14);
+	position:relative;
+	left:5%;
+	top:5%;
+	padding:5%;
+	width:80%;
+	
+	p {
+		margin:0px;
+	}
+}
+
+aside.popup {
+	button {
+		position:absolute;	
+		right:0px;	
+	}
+}
+
+.dialog {
+	nav:extend(nav.btn-panel) {
+		margin-bottom:0;
+
+		button:extend(button.tertiary) {
+			padding-bottom:0px;
+			&:first-child {padding-left:0;}
+			&:last-child {padding-right:0;}
+		}
 	}
 }

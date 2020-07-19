@@ -243,6 +243,102 @@ section {
       </figure>
     </section>
 
+    <section>
+      <h2>Bottom Tip</h2>
+      <p>This bottom panel is a confirm dialogue with extra info - often used as a result of a help tip, possibly where an additional preference is required</p>
+      <div style='width:300px;border:1px dashed grey;padding:20px;position:relative;height:300px;'>
+        <aside class="confirm-tip">
+          <p>Drag the handles to edit selection.</p>
+          <nav class="btn-panel">
+            <button class="secondary">cancel</button>
+            <button>confirm</button>
+          </nav>
+          <label class='checkbox'>
+            <input type='checkbox' />
+            <div class='checkbox'></div>
+            <span class='tip'>Always show <br />score detail</span>
+          </label>
+        </aside>
+      </div>
+
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;aside class="confirm-tip"&gt;
+              &lt;p&gt;Drag the handles to edit selection.&lt;/p&gt;
+              &lt;nav class="btn-panel"&gt;
+                &lt;button class="secondary"&gt;cancel&lt;/button&gt;
+                &lt;button&gt;confirm&lt;/button&gt;
+              &lt;/nav&gt;
+              &lt;label class='checkbox'&gt;
+                &lt;input type='checkbox' /&gt;
+                &lt;div class='checkbox'&gt;&lt;/div&gt;
+                &lt;span class='tip'&gt;Always show &lt;br /&gt;score detail&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/aside&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Popup</h2>
+      <p>This bottom panel is a confirm dialogue with extra info - often used as a result of a help tip, possibly where an additional preference is required</p>
+      <div style='width:300px;float:left;border:1px dashed grey;position:relative;height:300px;'>
+        <aside class="popup">
+          <p>These are the noun phrases in this sentence.<br />
+          Tap one to select it.</p>
+          <button class='btn-close'></button>
+        </aside>
+      </div>
+      <div style='width:300px;float:left;margin-left:10px;border:1px dashed grey;position:relative;height:300px;'>
+        <aside class="popup">
+          <p>Some tip message here with more help available.</p>
+          <button class='btn-help secondary'></button>
+        </aside>
+      </div>
+      <div class='clearfix'></div>
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;aside class="popup"&gt;
+              &lt;p&gt;These are the noun phrases in this sentence.&lt;br /&gt;
+              Tap one to select it.&lt;/p&gt;
+              &lt;button class='btn-close'&gt;&lt;/button&gt;
+            &lt;/aside&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Dialogue</h2>
+      <p>Dialogue box - in this example with cancel/confirm actions</p>
+      <div style='width:300px;border:1px dashed grey;position:relative;height:300px;'>
+        <div class="dialog">
+          <p>Confirm submit forum post?</p>
+          <nav>
+            <button>cancel</button>
+            <button>confirm</button>
+          </nav>
+        </div>
+      </div>
+
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;div class="dialog"&gt;
+              &lt;p&gt;Confirm submit forum post?&lt;/p&gt;
+              &lt;nav&gt;
+                &lt;button&gt;cancel&lt;/button&gt;
+                &lt;button&gt;confirm&lt;/button&gt;
+              &lt;/nav&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
     <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
     <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
