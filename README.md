@@ -1,6 +1,7 @@
 # DALI Component Toolkit
 
-[See the components live here](https://chrism-qmul.github.io/dali-component-toolkit/)
+- [See the components live here](https://chrism-qmul.github.io/dali-component-toolkit/)
+- [See the layouts live here](https://chrism-qmul.github.io/dali-component-toolkit/layout.html)
 
 ## To use them:
 

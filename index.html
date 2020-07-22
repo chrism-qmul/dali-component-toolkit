@@ -14,6 +14,7 @@ section {
   border-radius:10px;
   padding:15px;
   margin-bottom:2em;
+  background:white;
 }
 </style>
   </head>
@@ -21,6 +22,7 @@ section {
 
     <h1>DALI Component Toolkit</h1>
     <p>Write minimal HTML - get DALI components</p>
+    <p>Also see <a href='layout.html'>layouts</a></p>
     
     <section>
       <h2>Capsule Buttons</h2>
@@ -52,18 +54,20 @@ section {
     </section>
 
     <section>
-      <h2>Specific Round Buttons</h2>
-      <button class='btn-help secondary'></button>
-      <button class='btn-done'></button>
-      <button class='btn-done secondary'></button>
-      <button class='btn-map'></button>
-      <button class='btn-map secondary'></button>
-      <button class='btn-close'></button>
-      <button class='btn-open'></button>
-      <button class='btn-start secondary'></button>
-      <button class='btn-skip secondary'></button>
-      <button class='btn-forum secondary'></button>
-      <button class='btn-menu secondary'></button>
+      <h2>Specific Buttons</h2>
+      <p>These specifically themed buttons have icons - they can still be used in any button format (i.e. rounded, primary/secondary/tertiary)</p>
+      <button class='btn-help round secondary'></button>
+      <button class='btn-done round'></button>
+      <button class='btn-done round secondary'></button>
+      <button class='btn-map round'></button>
+      <button class='btn-map round secondary'></button>
+      <button class='btn-close round'></button>
+      <button class='btn-open round'></button>
+      <button class='btn-start round secondary'></button>
+      <button class='btn-skip round secondary'></button>
+      <button class='btn-forum round secondary'></button>
+      <button class='btn-menu round secondary'></button>
+      <button class='btn-menu tertiary'></button>
       <figure>
         <pre>
           <code class="language-markup">
@@ -78,6 +82,7 @@ section {
             &lt;button class='btn-skip secondary'&gt;&lt;/button&gt;
             &lt;button class='btn-forum secondary'&gt;&lt;/button&gt;
             &lt;button class='btn-menu secondary'&gt;&lt;/button&gt;
+            &lt;button class='btn-menu tertiary'&gt;&lt;/button&gt;
           </code>
         </pre>
       </figure>
@@ -306,6 +311,34 @@ section {
               Tap one to select it.&lt;/p&gt;
               &lt;button class='btn-close'&gt;&lt;/button&gt;
             &lt;/aside&gt;
+          </code>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Dialogue</h2>
+      <p>Dialogue box - in this example with cancel/confirm actions</p>
+      <div style='width:300px;border:1px dashed grey;position:relative;height:300px;'>
+        <div class="dialog">
+          <p>Confirm submit forum post?</p>
+          <nav>
+            <button>cancel</button>
+            <button>confirm</button>
+          </nav>
+        </div>
+      </div>
+
+      <figure>
+        <pre>
+          <code class="language-markup">
+            &lt;div class="dialog"&gt;
+              &lt;p&gt;Confirm submit forum post?&lt;/p&gt;
+              &lt;nav&gt;
+                &lt;button&gt;cancel&lt;/button&gt;
+                &lt;button&gt;confirm&lt;/button&gt;
+              &lt;/nav&gt;
+            &lt;/div&gt;
           </code>
         </pre>
       </figure>
