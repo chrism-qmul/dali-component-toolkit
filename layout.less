@@ -18,34 +18,43 @@ body {
 	.checkerboard(#ddd);
 }
 
-body > .container {
-	min-width:100%;
-	min-height:100%;
+main {
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
+	min-height:100%;
+	margin: 0 auto;
+	width:90%;
+	height:100%;
+	min-height:100%;
 
-	>nav {
-		background:white;
-	}
+	&.cutout {
+		justify-content:flex-start;
 
-	@media (min-width: @desktop-breakpoint) { 
 		>section {
-			width:550px;
-		}
-
-		>nav {
-			display:none;
+			margin:0px;
 		}
 	}
-	
+
 	>section {
 		padding:10px;
-		margin: 20px auto;
+		margin: 20px;
 		background:white;
 		border-radius:15px;
 		>h1,>h2,>h3 {
 			text-align:center;
+		}
+	}
+	@media (min-width: @desktop-breakpoint) { 
+		width:550px;
+	}
+}
+
+body {
+	>nav {
+		background:white;
+		@media (min-width: @desktop-breakpoint) { 
+			display:none;
 		}
 	}
 }
