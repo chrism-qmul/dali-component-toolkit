@@ -74,7 +74,7 @@ a.btn {
 				display:block;
 				width:24px; 
 				height:24px; 
-				.colorized-svg-background(@secondary, data-uri('image/svg+xml;charset=UTF-8',"./assets/btn/@{value}.svg"));
+				.colorized-svg-background(@secondary, data-uri('image/svg+xml;charset=UTF-8',"@{dalibaseurl}assets/btn/@{value}.svg"));
 			}
 			&.secondary::before {
 				background-color:@primary;
@@ -103,10 +103,10 @@ a.btn {
 		}
 	}
 	&-start {
-		background: data-uri('image/svg+xml;charset=UTF-8',"./assets/drag-start.svg");
+		background: data-uri('image/svg+xml;charset=UTF-8',"@{dalibaseurl}assets/drag-start.svg");
 	}
 	&-end {
-		background: data-uri('image/svg+xml;charset=UTF-8',"./assets/drag-end.svg");
+		background: data-uri('image/svg+xml;charset=UTF-8',"@{dalibaseurl}assets/drag-end.svg");
 	}
 }
 
@@ -209,7 +209,7 @@ label.checkbox {
 			content: " ";
 			width: 23px;
 			height: 17px;
-			background: data-uri('image/svg+xml;charset=UTF-8', 'assets/check.svg');
+			background: data-uri('image/svg+xml;charset=UTF-8', '@{dalibaseurl}assets/check.svg');
 			background-repeat: no-repeat;
 		}
 	}
