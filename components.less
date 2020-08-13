@@ -90,6 +90,26 @@ a.btn {
 	});
 }
 
+.drag {
+	&-start, &-end {
+		display:block;
+		width:47px; 
+		height:72px; 
+		color:@secondary;
+		cursor:pointer;
+
+		&.active {
+			cursor:move;
+		}
+	}
+	&-start {
+		background: data-uri('image/svg+xml;charset=UTF-8',"./assets/drag-start.svg");
+	}
+	&-end {
+		background: data-uri('image/svg+xml;charset=UTF-8',"./assets/drag-end.svg");
+	}
+}
+
 
 label.switch {
 	.slider {
