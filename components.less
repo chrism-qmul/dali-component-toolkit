@@ -315,9 +315,10 @@ aside.confirm-tip {
 	position:absolute;
 	bottom:0px;
 	background:@secondary;
-	left:5%;
+	left:50%;
 	padding:5%;
 	width:80%;
+	margin-left:-($width/2);
 	border-radius:15px 15px 0 0;
 	box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.24), 0 2px 83px 0 rgba(0, 0, 0, 0.14);
 
@@ -325,6 +326,11 @@ aside.confirm-tip {
 		margin-top:0;
 		text-align:center;
 		color:grey;
+	}
+
+	@media (min-width: @desktop-breakpoint) { 
+		width:550px;
+		margin-left:-($width/2);
 	}
 }
 
