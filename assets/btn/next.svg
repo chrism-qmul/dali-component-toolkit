@@ -1,0 +1,13 @@
+<svg width="5.9995" height="10" version="1.1" viewBox="0 0 5.9994998 10.00025" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <rect id="p9cj1ok3wa" width="109" height="18" rx="9"/>
+ </defs>
+ <g transform="translate(-243 -3)" fill-rule="evenodd">
+  <mask id="3t485ht45b" fill="#fff">
+   <use width="100%" height="100%" xlink:href="#p9cj1ok3wa"/>
+  </mask>
+  <g fill="#2a2a2a" fill-rule="nonzero">
+   <path transform="translate(243,3)" d="m4.19 5-3.97-3.78c-0.293-0.28-0.293-0.733 0-1.01 0.293-0.28 0.767-0.28 1.06 0l4.5 4.285c0.293 0.279 0.293 0.731 0 1.01l-4.5 4.286c-0.293 0.279-0.767 0.279-1.06 0-0.293-0.28-0.293-0.731 0-1.01z"/>
+  </g>
+ </g>
+</svg>
